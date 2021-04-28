@@ -13,6 +13,14 @@
 
 <div class="container mt-5">
     <h1>Blog of the site</h1>
+<!-- th:each=" записуємо кожен елемент в змінну el : що саме перебираємо/   клас для краси блоків -->
+    <div th:each="el : ${posts}" class="alert alert-info mt-2">
+        <h3 th:text="${el.title}"/>
+        <p th:text="${el.anons}"/>
+        <a th:href="'/blog/' + ${el.id}">Detailed</a>
+    </div>
+
+
 </div>
 
 <div th:insert="blocks/footer :: footer"></div>
