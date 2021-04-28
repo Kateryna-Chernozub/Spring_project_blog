@@ -1,9 +1,5 @@
 package com.firstproject.blog.controllers;
 
-//import org.springframework.stereotype.*;
-//import org.springframework.ui.*;
-//import org.springframework.web.bind.annotation.*;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,4 +14,9 @@ public class MainController {
         return "home";
     }
 
+    @GetMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("title", "Page about us");
+        return "about";
+    }
 }
